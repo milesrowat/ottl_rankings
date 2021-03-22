@@ -1,0 +1,31 @@
+---
+title: "Parameterized iris summary"
+date: "November 14, 2018"
+output: html_document
+params: 
+  athletes: "makinde_oluwasegun_1990"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(kableExtra)
+library(tidyverse)
+
+load("data/rankings_ind.rda")
+athletes <- params$athletes
+```
+
+## 'athletes'
+
+
+```{r ranking, echo = FALSE}
+
+
+rankings_ind %>%
+  filter(rankings_ind$ID == athletes) %>%
+  select(Event, Performance = Time.Distance, Wind, Location, Date = Long_Date, Age = Performance_Age) %>% 
+  arrange(Age) %>%
+  kbl() %>% 
+  kable_styling()
+```
+

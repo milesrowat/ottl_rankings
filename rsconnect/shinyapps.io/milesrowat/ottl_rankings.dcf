@@ -1,0 +1,12 @@
+name: ottl_rankings
+title: ottl_rankings
+username:
+account: milesrowat
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3436643
+bundleId: 4057629
+url: https://milesrowat.shinyapps.io/ottl_rankings/
+when: 1609786788.06141
+asMultiple: FALSE
+asStatic: FALSE
